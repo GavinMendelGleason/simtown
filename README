@@ -1,0 +1,56 @@
+# SimTown
+
+This (work in progress) simulator is designed to give a framework for
+writing realistic models of economies, for which various research
+questions can be asked.
+
+The basic concept is to create a "circuit of capital", agent based
+model of production, with a central bank, banks which take loans at
+the overnight rate, but have holdings, firms, which engage in
+commodity production, and people, who can obtain money from wages or
+from returns to capital.
+
+## Research Questions
+
+There are a number of research questions that a simulation may assist
+in providing predictions for, and dynamical understanding of.
+
+1. Can we produce predictions of macro-observables from a
+micro-foundation?
+    a. Can we predict money supply and velocity?
+    b. What are the effects of altering interest rates
+    c. Can growth be obtained by biasing loan structure?
+
+2. How does labour supply impact wage structure
+
+3. If we have a fine structure on wages with labour varieties as a
+sort of commodity, each of which requires human capital inputs:
+    a. What is the effect of subsidy?
+    b. How does dispersion of labour value to price relate?
+
+## The Circuit of Capital
+
+We start with a microfoundation of agents, both people and firms. Each
+firm employs people at wages.
+
+Production is defined as:
+
+```
+    M - C [ L_i + C_j ] - M'
+```
+
+All firms are price makers. They must guess a price higher than the
+cost of production.
+
+Capital is available on loan from the bank at market rate for
+capital. Banks borrow at the overnight rate by the central bank set as
+an exogenous parameter.
+
+Firms can take out loans to expand production.
+
+The production matrix is designed with different coefficients for each
+enterprise, subject to some constraints (conservation law).
+
+People have to purchase from the commodities such that they satisfy a
+maslow style hierarchy. New goods can be created which allow
+substitution in the hierarchy.
